@@ -3,9 +3,10 @@
 #include "greeting.h"
 
 // 定义一个返回类型为 Napi String 的 greetHello 函数，注意此处的 info
-Napi::String greetHello(const Napi::CallbackInfo& info) {
+Napi::String greetHello(const Napi::CallbackInfo &info) {
   Napi::Env env = info.Env();
-  std::string result = helloUser("world");
+  std::string user = (std::string) info[0].ToString();
+  std::string result = helloUser(user);
   return Napi::String::New(env, result);
 }
 
