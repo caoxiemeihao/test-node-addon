@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "clean": "node-gyp clean",
+    "configure": "node-gyp configure",
+    "build": "node-gyp build",
+    "rebuild": "node-gyp rebuild"
+  },
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^2.0.0",
