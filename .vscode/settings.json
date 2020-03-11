@@ -1,3 +1,0 @@
-{
-  "clang.cxxflags": "-I${workspaceFolder}/node_modules/node-addon-api"
-}
